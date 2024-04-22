@@ -9,7 +9,7 @@ import 'package:posts_api/pages/notifications.dart';
 import 'package:posts_api/pages/profile.dart';
 import 'package:posts_api/pages/search.dart';
 import 'package:posts_api/posts.dart';
-import 'package:posts_api/posts_an.dart';
+
 
 void main(){
   runApp(MaterialApp(

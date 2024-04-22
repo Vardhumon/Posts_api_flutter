@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
 class Posts extends StatefulWidget {
-  const Posts({Key? key}) : super(key: key);
+    Posts({Key? key}) : super(key: key);
 
   @override
   State<Posts> createState() => _PostsState();
@@ -25,7 +25,7 @@ class _PostsState extends State<Posts> {
   @override
   Widget build(BuildContext context) {
     return images.isEmpty || posts.isEmpty
-        ? const Center(child: CircularProgressIndicator())
+        ?   Center(child: CircularProgressIndicator())
         : SingleChildScrollView(
             child: Row(
               children: [
@@ -41,14 +41,14 @@ class _PostsState extends State<Posts> {
                       final body = post['body'];
 
                       return Container(
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.all(5),
+                        margin:   EdgeInsets.all(10),
+                        padding:   EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.black, width: 2),
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           boxShadow: [
-                           const BoxShadow(
+                            BoxShadow(
                               color: Colors.black38,
                               spreadRadius: 1,
                               blurRadius: 7,
@@ -61,7 +61,7 @@ class _PostsState extends State<Posts> {
                           children: [
                             Container(
                               decoration: BoxDecoration(
-                                borderRadius:  const BorderRadius.only(
+                                borderRadius:    BorderRadius.only(
                                   topLeft: Radius.circular(18),
                                   topRight: Radius.circular(18),
                                 ),
@@ -70,12 +70,12 @@ class _PostsState extends State<Posts> {
                                     color: Colors.grey.withOpacity(0.5),
                                     spreadRadius: 2,
                                     blurRadius: 7,
-                                    offset: const Offset(0, 3),
+                                    offset:   Offset(0, 3),
                                   )
                                 ],
                               ),
                               child: ClipRRect(
-                                borderRadius: const BorderRadius.only(
+                                borderRadius:   BorderRadius.only(
                                   topLeft: Radius.circular(18),
                                   topRight: Radius.circular(18),
                                 ),
@@ -89,7 +89,7 @@ class _PostsState extends State<Posts> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 8.0),
+                                  padding:   EdgeInsets.only(top: 8.0),
                                   child: Text(
                                     title,
                                     style: GoogleFonts.dmSerifDisplay(
@@ -99,7 +99,7 @@ class _PostsState extends State<Posts> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding:   EdgeInsets.all(4.0),
                                   child: Text(
                                     body,
                                     style: GoogleFonts.dosis(
@@ -129,8 +129,8 @@ class _PostsState extends State<Posts> {
                       final body = post['body'];
 
                       return Container(
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.all(5),
+                        margin:   EdgeInsets.all(10),
+                        padding:   EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.black, width: 2),
                           borderRadius: BorderRadius.circular(20),
@@ -149,7 +149,7 @@ class _PostsState extends State<Posts> {
                           children: [
                             Container(
                               decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.only(
+                                borderRadius:   BorderRadius.only(
                                   topLeft: Radius.circular(18),
                                   topRight: Radius.circular(18),
                                 ),
@@ -163,7 +163,7 @@ class _PostsState extends State<Posts> {
                                 ],
                               ),
                               child: ClipRRect(
-                                borderRadius: const BorderRadius.only(
+                                borderRadius:   BorderRadius.only(
                                   topLeft: Radius.circular(18),
                                   topRight: Radius.circular(18),
                                 ),
@@ -177,7 +177,7 @@ class _PostsState extends State<Posts> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 8.0),
+                                  padding:   EdgeInsets.only(top: 8.0),
                                   child: Text(
                                     title,
                                     style: GoogleFonts.dmSerifDisplay(
@@ -187,7 +187,7 @@ class _PostsState extends State<Posts> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding:   EdgeInsets.all(4.0),
                                   child: Text(
                                     body,
                                     style: GoogleFonts.dosis(
@@ -211,7 +211,7 @@ class _PostsState extends State<Posts> {
   }
 
   void getPosts() async {
-    const url = "https://jsonplaceholder.typicode.com/posts";
+     const url = "https://jsonplaceholder.typicode.com/posts";
     final uri = Uri.parse(url);
     final response = await http.get(uri);
     final body = response.body;
@@ -223,7 +223,7 @@ class _PostsState extends State<Posts> {
   }
 
   void getImages() async {
-    const url = "https://picsum.photos/v2/list?page=2&limit=100";
+    const  url = "https://picsum.photos/v2/list?page=2&limit=100";
     final uri = Uri.parse(url);
     final response = await http.get(uri);
     final body = response.body;
